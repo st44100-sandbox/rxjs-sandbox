@@ -22,9 +22,14 @@ export default class MyContainer extends React.Component {
     })
   }
 
-  onClick() {
+  plusplus() {
     //this.store.count.next(this.store.count.value + 1);
     this.store.count.value = this.store.count.value + 1;
+  }
+
+  reset() {
+    //this.store.count.next(this.store.count.value + 1);
+    this.store.count.value = 0;
   }
 
   render() {
@@ -33,7 +38,8 @@ export default class MyContainer extends React.Component {
         <p>COUNT: { this.state.store.count.value }</p>
         <MyButtons
           count={this.state.store.count.value}
-          onClick={() => { this.onClick(); }}
+          onClick={() => { this.plusplus(); }}
+          onReset={() => { this.reset(); }}
         />
       </div>
     );

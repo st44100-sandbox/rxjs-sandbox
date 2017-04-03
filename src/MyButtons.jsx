@@ -11,6 +11,9 @@ export default class MyButtons extends React.Component {
         <button
           onClick={() => { this.props.onClick(); }}
         >CLICK</button>
+        <button
+          onClick={() => { this.props.onReset(); }}
+        >RESET</button>
       </div>
     );
   }
